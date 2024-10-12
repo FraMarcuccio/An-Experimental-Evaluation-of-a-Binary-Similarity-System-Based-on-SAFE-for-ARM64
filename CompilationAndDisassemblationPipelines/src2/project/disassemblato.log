@@ -1,0 +1,111 @@
+openjdk version "17.0.12" 2024-07-16
+OpenJDK Runtime Environment (build 17.0.12+7-Debian-2deb12u1)
+OpenJDK 64-Bit Server VM (build 17.0.12+7-Debian-2deb12u1, mixed mode)
+INFO  Using log config file: jar:file:/app/ghidra_11.0.1_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /root/.ghidra/.ghidra_11.0.1_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /root/.ghidra/.ghidra_11.0.1_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1490 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Starting cache cleanup: /tmp/root-Ghidra/fscache2 (FileCacheMaintenanceDaemon)  
+INFO  Finished cache cleanup, estimated storage used: 0 (FileCacheMaintenanceDaemon)  
+INFO  HEADLESS Script Paths:
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Debug/Debugger-agent-frida/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Features/Python/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Debug/Debugger-agent-dbgmodel-traceloader/ghidra_scripts
+    /app/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /app/ghidra_11.0.1_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating project: /app/project/disassemblato (HeadlessAnalyzer)  
+INFO  Creating project: /app/project/disassemblato (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /app/project/disassemblato (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///app/ARM/zlib-1.3.1/CLANG-15.0.6/zlib-1.3.1_Object_and_ELF_Optimization2/adler32.o (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: AARCH64:LE:64:v8A:default (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///app/ARM/zlib-1.3.1/CLANG-15.0.6/zlib-1.3.1_Object_and_ELF_Optimization2/adler32.o (HeadlessAnalyzer)  
+ERROR Error during DWARFAnalyzer import:  (DWARFAnalyzer) ghidra.app.util.bin.format.dwarf4.DWARFException: Only DWARF version 2, 3, or 4 information is currently supported (detected 5).
+	at ghidra.app.util.bin.format.dwarf4.DWARFCompilationUnit.readCompilationUnit(DWARFCompilationUnit.java:155)
+	at ghidra.app.util.bin.format.dwarf4.next.DWARFProgram.bootstrapCompilationUnits(DWARFProgram.java:629)
+	at ghidra.app.util.bin.format.dwarf4.next.DWARFProgram.<init>(DWARFProgram.java:262)
+	at ghidra.app.plugin.core.analysis.DWARFAnalyzer.added(DWARFAnalyzer.java:109)
+	at ghidra.app.plugin.core.analysis.AnalysisScheduler.runAnalyzer(AnalysisScheduler.java:186)
+	at ghidra.app.plugin.core.analysis.AnalysisTask.applyTo(AnalysisTask.java:39)
+	at ghidra.app.plugin.core.analysis.AutoAnalysisManager$AnalysisTaskWrapper.run(AutoAnalysisManager.java:686)
+	at ghidra.app.plugin.core.analysis.AutoAnalysisManager.startAnalysis(AutoAnalysisManager.java:786)
+	at ghidra.app.plugin.core.analysis.AutoAnalysisManager.startAnalysis(AutoAnalysisManager.java:665)
+	at ghidra.app.plugin.core.analysis.AutoAnalysisManager.startAnalysis(AutoAnalysisManager.java:630)
+	at ghidra.app.util.headless.HeadlessAnalyzer.analyzeProgram(HeadlessAnalyzer.java:1027)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFileWithImport(HeadlessAnalyzer.java:1550)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processWithLoader(HeadlessAnalyzer.java:1732)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processWithImport(HeadlessAnalyzer.java:1673)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processWithImport(HeadlessAnalyzer.java:1757)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processLocal(HeadlessAnalyzer.java:458)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:127)
+	at ghidra.GhidraLauncher.launch(GhidraLauncher.java:78)
+	at ghidra.Ghidra.main(Ghidra.java:54)
+ 
+INFO  Packed database cache: /tmp/root-Ghidra/packed-db-cache (PackedDatabaseCache)  
+INFO  Applied data type archive: generic_clib_64 (ApplyDataArchiveAnalyzer)  
+INFO  -----------------------------------------------------
+    AARCH64 ELF PLT Thunks                     0.000 secs
+    ASCII Strings                              1.926 secs
+    Apply Data Archives                        1.462 secs
+    Basic Constant Reference Analyzer          0.190 secs
+    Call Convention ID                         0.000 secs
+    Call-Fixup Installer                       0.001 secs
+    Create Address Tables                      0.006 secs
+    Create Function                            0.000 secs
+    DWARF                                      0.044 secs
+    Data Reference                             0.007 secs
+    Decompiler Switch Analysis                 0.001 secs
+    Demangler GNU                              0.015 secs
+    Disassemble Entry Points                   0.266 secs
+    Embedded Media                             0.016 secs
+    External Entry References                  0.001 secs
+    Function Start Search                      0.056 secs
+    Function Start Search After Code           0.002 secs
+    Function Start Search After Data           0.002 secs
+    GCC Exception Handlers                     0.142 secs
+    Non-Returning Functions - Discovered       0.000 secs
+    Non-Returning Functions - Known            0.004 secs
+    Reference                                  0.001 secs
+    Shared Return Calls                        0.005 secs
+    Stack                                      0.255 secs
+    Subroutine References                      0.002 secs
+-----------------------------------------------------
+     Total Time   4 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+INFO  REPORT: Analysis succeeded for file: file:///app/ARM/zlib-1.3.1/CLANG-15.0.6/zlib-1.3.1_Object_and_ELF_Optimization2/adler32.o (HeadlessAnalyzer)  
+INFO  SCRIPT: /app/ghidra_scripts/ghidra_bridge_server.py (HeadlessAnalyzer)  
+INFO:jfx_bridge.bridge:serving! (jfx_bridge v1.0.0, Python 2.7.3)
+WARNING:jfx_bridge.bridge:Handling connection from ('127.0.0.1', 41310)
+INFO:jfx_bridge.bridge:Shutting down bridge
+INFO:jfx_bridge.bridge:stopped serving
+WARNING:jfx_bridge.bridge:Closing connection from ('127.0.0.1', 41310)
+INFO  ANALYZING changes made by post scripts: file:///app/ARM/zlib-1.3.1/CLANG-15.0.6/zlib-1.3.1_Object_and_ELF_Optimization2/adler32.o (HeadlessAnalyzer)  
+INFO  REPORT: Post-analysis succeeded for file: file:///app/ARM/zlib-1.3.1/CLANG-15.0.6/zlib-1.3.1_Object_and_ELF_Optimization2/adler32.o (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /adler32.o (disassemblato:/adler32.o) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  
